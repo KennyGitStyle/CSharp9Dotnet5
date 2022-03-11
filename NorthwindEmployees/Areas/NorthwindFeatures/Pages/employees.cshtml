@@ -1,0 +1,17 @@
+﻿@page
+@using NorthwindEntitiesLib
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model NorthwindEmployees.Areas.NorthwindFeatures.Pages.EmployeePageModel
+
+<div class="row">
+  <h2 class="display-2">Employees</h2>
+</div>
+<br />
+<div class="row">
+@foreach(Employee employee in Model.Employees)
+{
+  <div class="col-sm-3">
+    <partial name="_Employee" model="employee" />
+  </div>
+}
+</div>
